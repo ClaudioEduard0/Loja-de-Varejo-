@@ -4,45 +4,17 @@ public class Main {
 
 	public static void main (String[] args) {
 		//Criando um objeto
-		Endereco end1 = new Endereco();
-		Estoque est1 = new Estoque();
-		Clientes cli1 = new Clientes();
+		Endereco end1 = new Endereco("Amadeu fagundes de oliveira freitas","180","Alto petropolis","Porto Alegre","RS","91260010");
+		Estoque est1 = new Estoque("Fantasia do Homem Aranha e do Homem de Ferro","Chapéus, Copos, Pratos e Decoração","Camisetas, Bermudas e Calças","Video-game, Celular, Televisão");
+		Clientes cli1 = new Clientes("000.000.000.00","Claudio Eduardo",end1);
 		Fornecedores for1 = new Fornecedores();
 		Produtos pro1 = new Produtos();
 		Transportadora tra1 = new Transportadora();
 		Vendas ven1 = new Vendas();
 		Vendedores vend1 = new Vendedores();
 		
-		//Popular os dados
-		end1.bairro = "Centro";
-		end1.cep = "00000-000";
-		end1.cidade = "Porto Alegre";
-		end1.estado = "RS";
-		end1.numero = "00";
-		end1.rua = "rua almeida cunha";
+		System.out.printf("O senhor %s reside no endereço %s nº %s, no bairro %s - %s/%s\n",cli1.getNomeCompleto(),end1.getRua(),end1.getNumero(),end1.getBairro(),end1.getCidade(),end1.getEstado());
 		
-		est1.artigosFestas = "Decorações para aniversário ";
-		est1.eletronicos = "Eletrodomésticos";
-		est1.Fantasias = "Fantasias para carnaval";
-		est1.vestuario = "Roupas";
-		
-		cli1.cpf = "000.000.000.00";
-		cli1.endereco = end1;
-		cli1.nomeCompleto = "Joao Ribeiro Freitas";
-		
-		for1.endereco = end1;
-		for1.nomeEmpresa = "Atacado Distribuidora";
-		for1.produtosFornecidos = est1;
-		
-		pro1.produtos = est1;
-		
-		tra1.enderoEntrega = end1;
-		tra1.nomeTransportadora = "Transjoi transportadora LTDA";
-		tra1.tempoEntrega = "4 dias úteis";
-		
-		vend1.cpf = "000.000.000.00";
-		vend1.endereco = end1;
-		vend1.nomeCompleto = "João Silveira";
 				
 		
 	}
